@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis tareas | Gestor de Tareas</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="barra">
+    <h1>Gestor de Tareas</h1>
+    <div class="usuario">
+      <span id="nombreUsuario"></span>
+      <button class="btn-salir" id="btnSalir">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <section class="nueva-tarea">
+      <h2 id="tituloForm">Nueva tarea</h2>
+      <div id="mensaje" class="mensaje oculto"></div>
+      <form id="formTarea">
+        <div class="campo">
+          <input type="text" id="titulo" placeholder="Título de la tarea" required>
+        </div>
+        <div class="campo">
+          <input type="text" id="descripcion" placeholder="Descripción (opcional)">
+        </div>
+        <button type="submit" id="btnGuardar">Agregar tarea</button>
+      </form>
+    </section>
+
+    <section id="listaTareas"></section>
+  </main>
+
+  <script src="js/tareas.js"></script>
+</body>
+</html>

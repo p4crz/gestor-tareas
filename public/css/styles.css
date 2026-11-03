@@ -1,0 +1,131 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+.oculto { display: none !important; }
+
+/* ---------- LOGIN ---------- */
+.auth-body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1, #22d3ee);
+  padding: 20px;
+}
+
+.auth-card {
+  background: #fff;
+  width: 100%;
+  max-width: 400px;
+  padding: 36px 32px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.auth-card h1 { text-align: center; font-size: 1.7rem; margin-bottom: 6px; }
+.subtitulo { text-align: center; color: #64748b; margin-bottom: 22px; }
+
+.campo { margin-bottom: 16px; }
+.campo label { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 6px; }
+
+.campo input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo input:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+button {
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  transition: transform 0.1s, opacity 0.2s;
+}
+button:hover { opacity: 0.9; }
+button:active { transform: scale(0.98); }
+
+#formAuth button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #6366f1;
+  color: #fff;
+  font-weight: 600;
+}
+
+.cambio { text-align: center; margin-top: 18px; font-size: 0.92rem; color: #64748b; }
+.cambio a { color: #6366f1; font-weight: 600; text-decoration: none; }
+
+.mensaje {
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 0.92rem;
+}
+.mensaje.error { background: #fee2e2; color: #b91c1c; }
+.mensaje.ok { background: #dcfce7; color: #15803d; }
+
+/* ---------- TAREAS ---------- */
+.barra {
+  background: #fff;
+  padding: 14px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+.barra h1 { font-size: 1.3rem; color: #6366f1; }
+.barra .usuario { display: flex; align-items: center; gap: 14px; }
+.btn-salir { background: #e2e8f0; padding: 8px 14px; }
+
+.contenedor { max-width: 700px; margin: 28px auto; padding: 0 16px; }
+
+.nueva-tarea {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  margin-bottom: 24px;
+}
+.nueva-tarea h2 { font-size: 1.1rem; margin-bottom: 14px; }
+.nueva-tarea .campo input { margin-bottom: 0; }
+.nueva-tarea button[type="submit"] {
+  background: #6366f1;
+  color: #fff;
+  padding: 11px 20px;
+  font-weight: 600;
+}
+
+.tarea {
+  background: #fff;
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.tarea .info { flex: 1; }
+.tarea h3 { font-size: 1.05rem; }
+.tarea p { color: #64748b; font-size: 0.9rem; margin-top: 3px; }
+.tarea.completada h3 { text-decoration: line-through; color: #94a3b8; }
+.tarea input[type="checkbox"] { width: 20px; height: 20px; cursor: pointer; }
+
+.btn-editar { background: #e0e7ff; color: #4338ca; padding: 8px 12px; }
+.btn-borrar { background: #fee2e2; color: #b91c1c; padding: 8px 12px; }
+
+.vacio { text-align: center; color: #94a3b8; padding: 30px; }
